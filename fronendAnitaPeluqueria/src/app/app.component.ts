@@ -41,17 +41,63 @@ export class AppComponent {
   sideMenu() {
     this.navigate = [
       {
-        title: "Inicio Usuario",
+        title: "Inicio",
         url: "/tabs/tabs/tab1",
         icon: "home-outline"
       },
       {
         title: "Mi Perfil",
         url: "/perfilusuario",
-        icon: "man-outline"
+        icon: "person-outline"
+      },
+      {
+        title: "Clientes",
+        url: "/clientes",
+        icon: "people-outline"
+      },
+      {
+        title: "Citas",
+        url: "/citas",
+        icon: "calendar-outline"
+      },
+      {
+        title: "Atenciones",
+        url: "/atenciones",
+        icon: "cut-outline"
+      },
+      {
+        title: "Agregar Cliente",
+        url: "/agregar-cliente",
+        icon: "person-add-outline"
+      },
+      {
+        title: "Agendar Cita",
+        url: "/agendar-cita",
+        icon: "calendar-number-outline"
+      },
+      {
+        title: "Agendar desde Móvil",
+        url: "/agendar-movil",
+        icon: "phone-portrait-outline"
+      },
+      {
+        title: "Registrar Atención",
+        url: "/registrar-atencion",
+        icon: "clipboard-outline"
+      },
+      {
+        title: "Historial de Atenciones",
+        url: "/historial",
+        icon: "time-outline"
+      },
+      {
+        title: "Cerrar Sesión",
+        url: "/login",
+        icon: "log-out-outline"
       }
     ];
   }
+  
 
   // sideMenu() {
   //   this.navigate = [];
