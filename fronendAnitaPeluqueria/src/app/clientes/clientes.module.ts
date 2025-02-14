@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ClientesPageRoutingModule } from './clientes-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 // No es necesario declarar el componente si es standalone
 import { ClientesPage } from './clientes.page';
@@ -10,8 +13,8 @@ import { ClientesPage } from './clientes.page';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,
+    FormsModule, // <-- Agregar esto
+    ReactiveFormsModule, // <-- Agregar esto si usas formularios reactivos
     ClientesPageRoutingModule
   ],
   // No declarar ClientesPage aquí si es standalone
