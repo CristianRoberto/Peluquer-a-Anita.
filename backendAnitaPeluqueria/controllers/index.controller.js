@@ -221,12 +221,25 @@ const createCita = async (req, res) => {
 
 const getCitas = async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM citas');
+        const result = await pool.query(`
+            SELECT 
+                c.id AS cita_id, 
+                c.fecha, 
+                cl.id AS cliente_id, 
+                cl.nombre AS cliente_nombre, 
+                s.id AS servicio_id, 
+                s.nombre AS servicio_nombre
+            FROM citas c
+            JOIN clientes cl ON c.cliente_id = cl.id
+            JOIN servicios s ON c.servicio_id = s.id
+        `);
+        
         res.status(200).json(result.rows);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
+
 
 const getCitaById = async (req, res) => {
     const { id } = req.params;

@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { ClienteservicioService } from '../services/clienteservicio.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CalendarModalComponent } from '../components/calendar-modal.component'; 
+
 
 
 @Component({

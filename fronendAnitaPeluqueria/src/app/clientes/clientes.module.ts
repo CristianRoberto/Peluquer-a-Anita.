@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // No es necesario declarar el componente si es standalone
-import { ClientesPage } from './clientes.page';
 
 @NgModule({
   imports: [
